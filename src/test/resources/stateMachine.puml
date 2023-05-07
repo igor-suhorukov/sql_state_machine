@@ -1,0 +1,42 @@
+@startuml
+hide empty description
+state "high school student" as 5
+state "middle school student" as 3
+state "basic general education" as 4
+state "secondary general education" as 6
+state "postgraduate" as 11
+state "born" as 0
+state "candidate for a degree" as 12
+state "technical school graduate" as 8
+state "institute student" as 9
+state "PhD" as 13
+state "no longer learning" as 14
+state "goes to kindergarten" as 1
+state "completed higher education" as 10
+state "elementary school student" as 2
+state "technical school student" as 7
+9 : funniest time for young people
+9 : in the same time each student need to improve self education habits
+12 : make research
+[*] --> 0 : true
+0 --> 1 : age>=3 and desire_to_learn
+1 --> 2 : age>=7 and exams is null and desire_to_learn
+2 --> 3 : age>=11 and exams is null and desire_to_learn
+3 --> 4 : age>=15 and exams='final exams in the 9th grade of the school'
+4 --> 5 : age>=15 and desire_to_learn
+5 --> 6 : age>=17 and exams='final exams in the 11th grade of the schoolе'
+4 --> 7 : age>=16 and exams='college entrance exams' and desire_to_learn
+7 --> 8 : age>=18 and exams='graduation from college'
+6 --> 9 : age>=18 and exams='university entrance exams' and desire_to_learn
+8 --> 9 : age>=18 and exams='university entrance exams' and desire_to_learn
+9 --> 10 : age>=22 and exams='graduation from university' and desire_to_learn
+10 --> 11 : age>=22  and exams='postgraduate exams' and desire_to_learn
+11 --> 12 : age>=24 and exams='candidate of sciences exams' and desire_to_learn
+12 --> 13 : age>=25 and exams='PhD thesis' and desire_to_learn
+4 --> 14 : not(desire_to_learn)
+6 --> 14 : not(desire_to_learn)
+8 --> 14 : not(desire_to_learn)
+10 --> 14 : not(desire_to_learn)
+13 --> 14 : not(desire_to_learn)
+14 --> [*] : age>=100
+@enduml
