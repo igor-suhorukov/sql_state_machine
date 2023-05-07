@@ -24,7 +24,7 @@ state "technical school student" as 7
 2 --> 3 : age>=11 and exams is null and desire_to_learn
 3 --> 4 : age>=15 and exams='final exams in the 9th grade of the school'
 4 --> 5 : age>=15 and desire_to_learn
-5 --> 6 : age>=17 and exams='final exams in the 11th grade of the schoolе'
+5 --> 6 : age>=17 and exams='final exams in the 11th grade of the school'
 4 --> 7 : age>=16 and exams='college entrance exams' and desire_to_learn
 7 --> 8 : age>=18 and exams='graduation from college'
 6 --> 9 : age>=18 and exams='university entrance exams' and desire_to_learn

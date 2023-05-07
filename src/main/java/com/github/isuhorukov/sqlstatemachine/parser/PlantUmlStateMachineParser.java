@@ -25,7 +25,8 @@ public class PlantUmlStateMachineParser implements StateMachineParser {
     public StateMachine parse(BufferedReader bufferedSource)  throws IOException {
         List<StateTransition> stateTransitions = new ArrayList<>();
         Map<Short, State> states = new TreeMap<>();
-
+        states.put(Short.MIN_VALUE, new State(Short.MIN_VALUE, "[*]"));
+        states.put(Short.MAX_VALUE, new State(Short.MAX_VALUE, "[*]"));
         String line;
         while ((line = bufferedSource.readLine()) != null){
             Matcher descriptionMatcher = DESCRIPTION_REGEX.matcher(line);
