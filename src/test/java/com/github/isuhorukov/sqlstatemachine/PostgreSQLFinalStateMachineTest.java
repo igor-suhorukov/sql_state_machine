@@ -16,7 +16,7 @@ import java.sql.DriverManager;
 import java.sql.Statement;
 
 @Testcontainers
-public class PostgreSQLFinalStateMachine {
+public class PostgreSQLFinalStateMachineTest {
     @Container
     private PostgreSQLContainer postgresqlContainer = new PostgreSQLContainer("postgres:15.2-bullseye")
             .withDatabaseName("fsm")
@@ -40,7 +40,6 @@ public class PostgreSQLFinalStateMachine {
              Statement statement = connection.createStatement();){
             statement.executeUpdate(stateTransitionType);
             statement.executeUpdate(stateTransitionFunction);
-            statement.executeUpdate(stateTransitionFinalFunction);
             statement.executeUpdate(stateTransitionFinalFunction);
             statement.executeUpdate(stateTransitionAggregateFunction);
         }
