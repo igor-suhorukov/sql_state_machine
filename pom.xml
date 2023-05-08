@@ -11,6 +11,7 @@
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+        <posgresql.driver.version>42.6.0</posgresql.driver.version>
         <lombok.version>1.18.26</lombok.version>
         <testcontainers.version>1.18.0</testcontainers.version>
         <jackson.version>2.15.0</jackson.version>
@@ -60,6 +61,11 @@
             <groupId>org.testcontainers</groupId>
             <artifactId>postgresql</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${posgresql.driver.version}</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
