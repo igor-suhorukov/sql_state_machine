@@ -26,7 +26,7 @@ public class PlantUmlStateMachineParserTest {
         Assertions.assertThat(fsmAsJson).isEqualTo("{\n" +
                 "  \"states\" : [ {\n" +
                 "    \"id\" : -32768,\n" +
-                "    \"name\" : \"[*]\"\n" +
+                "    \"name\" : \"[*]->\"\n" +
                 "  }, {\n" +
                 "    \"id\" : 0,\n" +
                 "    \"name\" : \"born\"\n" +
@@ -77,7 +77,7 @@ public class PlantUmlStateMachineParserTest {
                 "    \"name\" : \"no longer learning\"\n" +
                 "  }, {\n" +
                 "    \"id\" : 32767,\n" +
-                "    \"name\" : \"[*]\"\n" +
+                "    \"name\" : \"->[*]\"\n" +
                 "  } ],\n" +
                 "  \"transitions\" : [ {\n" +
                 "    \"from\" : -32768,\n" +
