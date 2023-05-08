@@ -47,7 +47,7 @@ public class PlantUmlStateMachineParser implements StateMachineParser {
                     from = Short.parseShort(fromString);
                 }
                 if(TERMINAL_STATE.equals(toString)){
-                    to = Short.MIN_VALUE;
+                    to = Short.MAX_VALUE;
                 } else {
                     to = Short.parseShort(toString);
                 }

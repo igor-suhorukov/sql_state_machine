@@ -161,7 +161,7 @@ public class PlantUmlStateMachineParserTest {
                 "    \"transitionRule\" : \"not(desire_to_learn)\"\n" +
                 "  }, {\n" +
                 "    \"from\" : 14,\n" +
-                "    \"to\" : -32768,\n" +
+                "    \"to\" : 32767,\n" +
                 "    \"transitionRule\" : \"age>=100\"\n" +
                 "  } ]\n" +
                 "}");
